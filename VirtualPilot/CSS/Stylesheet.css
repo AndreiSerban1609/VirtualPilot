@@ -1,0 +1,179 @@
+h1 {text-align:center;
+  font-family: verdana;}
+h3 {color: black;
+    font-size: 150%;}
+p {color: black;
+   font-family: verdana;}
+
+#googleMap {
+  border: 5px outset black;
+  width: 60%;
+  float: right;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px 40px 40px 40px;
+  background-color: #fff;
+  position: relative;
+}
+
+#controlDiv {
+  border: 5px outset black;
+  width: 30%;
+  float: left;
+  height: 200px;
+  text-align: center;
+  border-radius: 40px 40px 40px 40px;
+  background-color: #fff;
+}
+
+.spacemaker {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#infoDiv {
+  border: 5px outset black;
+  width: 30%;
+  float: left;
+  height: auto;
+  text-align: center;
+  border-radius: 40px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+#ControlTable {
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+button {background-color: azure;}
+
+.startingButton {
+  border: 5px outset black;
+  border-radius: 15px 15px 15px 15px;
+  text-align: center;
+  width: 60%;
+  height: 40%;
+  font-size: 100%;
+  font-family: verdana;
+  display: inline-block;
+  max-width: 250px;
+}
+.startingButton:hover {
+  background-color: #2980B9;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+.indexRef {
+  width: 100%;
+  height: 70%;
+  background-color: rgb(189, 140, 76);
+background-image: url("wood-pattern.png");
+  border-radius: 15px 15px 15px 15px;
+  border: 5px outset black;
+  text-align: center;
+  padding: 3% 10%;
+  font-size: 200%;
+}
+
+.indexRef:hover{
+  background-color: rgb(240, 173, 90);
+}
+
+.takeoff {
+  border: 5px outset black;
+  border-radius: 15px 15px 15px 15px;
+  text-align: center;
+  width: 70%;
+  height: 15%;
+  font-size: 150%;
+  font-family: verdana;
+}
+.takeoff:hover {
+  background-color: #2980B9;
+}
+.Input {
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 30%;
+  width: 100%;
+}
+
+#buttonMenu {
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 80%;
+  width: 100%;
+}
+
+#indexBackground {
+  background-color: #966504;
+background-image: url("wood-pattern.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+#indexTitle {
+  border: 5px outset black;
+  width: 30%;
+  height: 100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 15px 15px 15px 15px;
+  text-align: center;
+  background-color: rgb(189, 140, 76);
+  background-image: url("wood-pattern.png");
+  font-size: 100%;
+  margin: 0% 35%;
+}

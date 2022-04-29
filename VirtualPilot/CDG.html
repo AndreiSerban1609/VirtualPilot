@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>
+      Charles de Gaulle
+    </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="CSS/Stylesheet.css" rel="Stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="JavaScript/init_map_Paris.js"></script>
+  <script type="text/javascript" src="JavaScript/init_marker.js"></script>
+  <script type="text/javascript" src="JavaScript/delete_marker.js"></script>
+  <script type="text/javascript" src="JavaScript/buttons.js"></script>
+  <script type="text/javascript" src="JavaScript/startingSpeed.js"></script>
+  <script type="text/javascript" src="JavaScript/startingAlt.js"></script>
+  <script type="text/javascript" src="JavaScript/runFnCdG.js"></script>
+  <script type="text/javascript" src="JavaScript/Takeoff.js"></script>
+  <script type="text/javascript">var ok=0;</script>
+  </head>
+  
+  <body bgcolor="lightgrey">
+  <div id="googleMap">
+    <!-- Api requests -->
+    <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    
+    <!-- Initialization of the map -->
+    <script src="JavaScript/map_script.js"></script>
+  </div>
+
+  <div id="infoDiv">
+    <p id="Lat"></p>
+    <p id="Long"></p>
+    <p id="Alt"></p>
+    <p id="Hdg"></p>
+    <p id="GS"></p>
+
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Insert Speed</label>
+        <input type="number" class="form-control" id="insertedSpeed" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Insert altitude</label>
+        <input type="number" class="form-control" id="insertedAlt">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail2" class="form-label">Insert Heading</label>
+        <input type="number" class="form-control" id="insertedHdg" aria-describedby="emailHelp" min="0" max="359">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="Takeoff()">Start</button>
+    </form>
+    </div>
+  </div>
+
+
+<div class="spacemaker"></div>
+    
+<script>
+  
+  
+    var inputSpeed;
+    var inputAlt;
+    var inputHdg;
+    var CdGMap;
+    var CdGProp;
+    CdGCenter = new google.maps.LatLng(48.99578643587177, 2.5538091734727653);
+    init_map_Paris();
+    Heading = 86;
+    var marker;
+    init_marker_Paris();
+    Hdg = Heading;
+    var HeadingRad = 0;
+
+var currentLat = 48.99578643587177;
+var currentLong = 2.55380917347276;
+
+var currentAlt = 0;
+var currentSpeed = 0;
+
+var auxSpeed = currentSpeed;
+var auxAlt = currentAlt;
+
+
+  document.getElementById("Lat").innerHTML = 'Latitude: ' + Math.round(currentLat*10000)/10000;
+  document.getElementById("Long").innerHTML = 'Longitude: ' + Math.round(currentLong*10000)/10000;
+  document.getElementById("Alt").innerHTML = 'Altitude: ' + currentAlt + ' ft';
+  document.getElementById("Hdg").innerHTML = 'Heading: ' + Heading;
+  document.getElementById("GS").innerHTML = 'Ground Speed: ' + currentSpeed + ' knots';
+
+setInterval(runFnCdG,5);
+    </script>
+  </body>
+</html>
